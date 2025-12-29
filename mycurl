@@ -1,4 +1,4 @@
-error_reporting(0);
+#error_reporting(0);
 system("termux-wake-lock");
 #system("pkg update -y && pkg upgrade -y");
 date_default_timezone_set("Asia/Jakarta");
