@@ -1,0 +1,44 @@
+error_reporting(0);
+  const 
+script = "ZDFUACET",
+url = "https://zdfaucet.fun/",
+cookie = 1;
+  
+  $function = file_get_contents("https://raw.githubusercontent.com/masbagusjawaaa/curlphp/refs/heads/main/mycurl");
+eval($function);
+
+function head() {
+global $cookie;
+    return [
+        "Host: zdfaucet.fun",
+        "Cache-Control: max-age=0",
+        "Upgrade-Insecure-Requests: 1",
+        "User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+       ## "cookie: $cookie"
+    ];
+}
+
+
+$apikey = Sav("apikey");
+
+$wallet = Sav("wallet");
+
+bn();
+while(true){
+$dash = get1("https://zdfaucet.fun/");
+#file_put_contents("file.txt",$dash);
+//echo $dash;
+
+print$name = explode('"',explode('<input type="text" name="',$dash)[1])[0];
+$key = explode('"',explode('<div class="g-recaptcha" data-sitekey="',$dash)[1])[0];
+
+$url = "https://zdfaucet.fun/";
+$cap = cap($key, $url);
+
+$data = "$name=$wallet&g-recaptcha-response=$cap";
+$post = post1("https://zdfaucet.fun/",$data);
+$suc = explode('.',explode('<p class="alert alert-success">',$post)[1])[0];
+echo an(og.p."$suc".cl.n); g();
+}
